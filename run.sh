@@ -10,7 +10,10 @@ source .envrc
 loadkeys us
 
 pacman-mirrors --api --set-branch stable --url https://manjaro.moson.org
-pacman-mirrors -f
+
+# enable this when connections are bad or packages are out of date
+# pacman-mirrors -f
+
 pacman --noconfirm -Syy pacman archlinux-keyring manjaro-keyring
 
 pacman-key --init
@@ -19,8 +22,8 @@ pacman-key --refresh-keys --keyserver hkp://pool.sks-keyservers.net
 pacman -S --noconfirm expect
 
 # https://www.ibm.com/support/knowledgecenter/SS6PEW_10.0.0/security/t_security_settingupluksencryption.html
-echo -e "YES\n$ROOT_PARTITION_PASSWORD\n$ROOT_PARTITION_PASSWORD" | cryptsetup -y -v luksFormat $ROOT_PARTITION
-./luksopen-root.exp
+echo -e "$ROOT_PARTITION_PASSWORD" | cryptsetup -q luksFormat $ROOT_PARTITION
+echo "$ROOT_PARTITION_PASSWORD" | cryptsetup luksOpen $ROOT_PARTITION cryptroot
 
 # format our partitions
 mkfs.fat -F 32 $EFI_PARTITION

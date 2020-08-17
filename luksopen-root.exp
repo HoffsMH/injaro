@@ -1,8 +1,0 @@
-#!/usr/bin/env expect
-
-
-
-
-spawn -noecho ./luksopen-root.sh
-expect "*:*" { send -- "$ROOT_PARTITION_PASSWORD" }
-interact
