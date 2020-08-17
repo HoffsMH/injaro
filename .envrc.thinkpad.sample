@@ -1,7 +1,7 @@
-export EFI_PARTITION=/dev/sda1
-export BOOT_PARTITION=/dev/sda2
-export SWAP_PARTITION=/dev/sda3
-export ROOT_PARTITION=/dev/sda4
+export EFI_PARTITION=/dev/nvme0n1p4
+export BOOT_PARTITION=/dev/nvme0n1p5
+export SWAP_PARTITION=/dev/nvme0n1p6
+export ROOT_PARTITION=/dev/nvme0n1p7
 export ROOT_PARTITION_PASSWORD="change this!"
 export MACHINE_NAME="nile"
 export LINUX_KERNEL="linux54"
