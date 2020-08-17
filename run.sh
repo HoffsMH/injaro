@@ -27,14 +27,15 @@ echo "$ROOT_PARTITION_PASSWORD" | cryptsetup luksOpen $ROOT_PARTITION cryptroot
 
 # format our partitions
 mkfs.fat -F 32 $EFI_PARTITION
-mkfs.ext4 $BOOT_PARTITION
-mkfs.ext4 /dev/mapper/cryptroot
+mkfs.ext4 -F $BOOT_PARTITION
+mkfs.ext4 -F /dev/mapper/cryptroot
 mkswap $SWAP_PARTITION
 
 
 mount /dev/mapper/cryptroot /mnt
 mkdir -p /mnt/boot/efi
 mount $BOOT_PARTITION /mnt/boot/
+mkdir -p /mnt/boot/efi
 mount $EFI_PARTITION /mnt/boot/efi
 
 basestrap /mnt $LINUX_KERNEL \
