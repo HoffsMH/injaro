@@ -208,5 +208,5 @@ cat /mnt/etc/fstab
 manjaro-chroot /mnt ./chroot.sh
 
 
-umount -R /mnt
-reboot
+# umount -R /mnt
+# reboot

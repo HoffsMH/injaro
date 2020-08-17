@@ -27,7 +27,7 @@ echo -e "$ROOT_PASSWORD\n$ROOT_PASSWORD" | passwd
 useradd $USER_NAME -G sys,network,power,video,storage,lp,input,audio,wheel
 echo -e "$USER_PASSWORD\n$USER_PASSWORD" | passwd $USER_NAME
 
-mkinitcpio -p $LINUX_KERNEL
+mkinitcpio -p $LINUX_KERNEL -A sd-encrypt,keyboard,sd-console
 
 # install refind
 refind-install
