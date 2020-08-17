@@ -202,7 +202,7 @@ cp .envrc /mnt/
 cp chroot.sh /mnt/
 
 genfstab -U /mnt >> /mnt/etc/fstab
-echo "GENERATED FSTAB \n ${genfstab -U /mnt}"
+echo "FSTAB #########################################"
 cat /mnt/etc/fstab
 
 manjaro-chroot /mnt ./chroot.sh
