@@ -29,8 +29,6 @@ echo -e "$USER_PASSWORD\n$USER_PASSWORD" | passwd $USER_NAME
 
 mkinitcpio -p $LINUX_KERNEL
 
-genfstab -U / >> /etc/fstab
-
 # install refind
 refind-install
 
