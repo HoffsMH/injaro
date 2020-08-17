@@ -165,7 +165,6 @@ basestrap /mnt $LINUX_KERNEL \
   udisks2 \
   cantarell-fonts \
   noto-fonts \
-  noto-fonts-cjk \
   terminus-font \
   ttf-bitstream-vera \
   pamac \
