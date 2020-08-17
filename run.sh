@@ -202,6 +202,8 @@ cp .envrc /mnt/
 cp chroot.sh /mnt/
 
 genfstab -U /mnt >> /mnt/etc/fstab
+cp mkinitcpio.conf /mnt/etc/mkinitcpio.conf
+
 echo "FSTAB #########################################"
 cat /mnt/etc/fstab
 
