@@ -151,7 +151,9 @@ basestrap /mnt $LINUX_KERNEL \
   manjaro-pulse \
   pulseaudio-bluetooth \
   pulseaudio-ctl \
-  pulseaudio-zeroconf
+  pulseaudio-zeroconf \
+  refind \
+  refind-theme-maia
   # android-tools \
   # android-udev
   # gvfs \
@@ -189,8 +191,6 @@ basestrap /mnt $LINUX_KERNEL \
   # libopenraw \
   # light-locker \
   # network-manager-applet \
-  # refind \
-  # refind-theme-maia \
   # mkinitcpio \
   # efibootmgr \
   # vim \
