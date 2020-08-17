@@ -143,10 +143,10 @@ basestrap /mnt $LINUX_KERNEL \
   alsa-firmware \
   alsa-utils \
   ffmpeg \
-  gst-libav
-  # gst-plugins-base \
-  # gst-plugins-good \
-  # gst-plugins-ugly \
+  gst-libav \
+  gst-plugins-base \
+  gst-plugins-good \
+  gst-plugins-ugly
   # libdvdcss \
   # manjaro-pulse \
   # pulseaudio-bluetooth \
@@ -199,7 +199,7 @@ basestrap /mnt $LINUX_KERNEL \
 cp .envrc /mnt/
 cp chroot.sh /mnt/
 
-manjaro-chroot /mnt chroot.sh
+manjaro-chroot /mnt ./chroot.sh
 
 exit
 umount -R /mnt
