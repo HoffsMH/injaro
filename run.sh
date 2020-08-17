@@ -19,7 +19,7 @@ pacman-key --refresh-keys --keyserver hkp://pool.sks-keyservers.net
 
 # https://www.ibm.com/support/knowledgecenter/SS6PEW_10.0.0/security/t_security_settingupluksencryption.html
 echo -e "YES\n$ROOT_PARTITION_PASSWORD\n$ROOT_PARTITION_PASSWORD" | cryptsetup -y -v luksFormat $ROOT_PARTITION
-cryptsetup luksOpen $ROOT_PARTITION cryptroot
+echo -e "$ROOT_PARTITION_PASSWORD\n" | cryptsetup luksOpen $ROOT_PARTITION cryptroot
 
 # format our partitions
 mkfs.fat -F 32 $EFI_PARTITION
