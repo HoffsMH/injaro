@@ -96,7 +96,6 @@ basestrap /mnt $LINUX_KERNEL \
   perl \
   procps-ng \
   psmisc \
-  reiserfsprogs \
   sed \
   shadow \
   spectre-meltdown-checker \
@@ -114,87 +113,87 @@ basestrap /mnt $LINUX_KERNEL \
   mdadm \
   nfs-utils \
   rsync \
-  systemd-fsck-silent \
-  systemd-sysvcompat \
-  tlp \
-  wpa_supplicant \
-  tar \
-  texinfo \
-  usbutils \
-  util-linux \
-  wget \
-  which \
-  xfsprogs \
-  zsh \
-  avahi \
-  networkmanager \
-  networkmanager-openconnect \
-  networkmanager-openvpn \
-  networkmanager-pptp \
-  networkmanager-vpnc \
-  nss-mdns \
-  ntp \
-  mobile-broadband-provider-info \
-  modemmanager \
-  openresolv \
-  openssh \
-  samba \
-  usb_modeswitch \
-  alsa-firmware \
-  alsa-utils \
-  ffmpeg \
-  gst-libav \
-  gst-plugins-base \
-  gst-plugins-good \
-  gst-plugins-ugly \
-  libdvdcss \
-  manjaro-pulse \
-  pulseaudio-bluetooth \
-  pulseaudio-ctl \
-  pulseaudio-zeroconf \
-  android-tools \
-  android-udev \
-  gvfs \
-  gvfs-afc \
-  gvfs-gphoto2 \
-  gvfs-mtp \
-  gvfs-nfs \
-  gvfs-smb \
-  mtpfs \
-  udiskie \
-  udisks2 \
-  cantarell-fonts \
-  noto-fonts \
-  terminus-font \
-  ttf-bitstream-vera \
-  pamac \
-  accountsservice \
-  exo \
-  garcon \
-  thunar \
-  thunar-volman \
-  tumbler \
-  xfce4-appfinder \
-  xfce4-panel \
-  xfce4-power-manager \
-  xfce4-session \
-  xfce4-settings \
-  xfconf \
-  xfdesktop \
-  xfwm4 \
-  blueman \
-  ffmpegthumbnailer \
-  freetype2 \
-  gnome-keyring \
-  libopenraw \
-  light-locker \
-  network-manager-applet \
-  refind \
-  refind-theme-maia \
-  mkinitcpio \
-  efibootmgr \
-  vim \
-  links
+  systemd-fsck-silent
+  # systemd-sysvcompat \
+  # tlp \
+  # wpa_supplicant \
+  # tar \
+  # texinfo \
+  # usbutils \
+  # util-linux \
+  # wget \
+  # which \
+  # xfsprogs \
+  # zsh \
+  # avahi \
+  # networkmanager \
+  # networkmanager-openconnect \
+  # networkmanager-openvpn \
+  # networkmanager-pptp \
+  # networkmanager-vpnc \
+  # nss-mdns \
+  # ntp \
+  # mobile-broadband-provider-info \
+  # modemmanager \
+  # openresolv \
+  # openssh \
+  # samba \
+  # usb_modeswitch \
+  # alsa-firmware \
+  # alsa-utils \
+  # ffmpeg \
+  # gst-libav \
+  # gst-plugins-base \
+  # gst-plugins-good \
+  # gst-plugins-ugly \
+  # libdvdcss \
+  # manjaro-pulse \
+  # pulseaudio-bluetooth \
+  # pulseaudio-ctl \
+  # pulseaudio-zeroconf \
+  # android-tools \
+  # android-udev \
+  # gvfs \
+  # gvfs-afc \
+  # gvfs-gphoto2 \
+  # gvfs-mtp \
+  # gvfs-nfs \
+  # gvfs-smb \
+  # mtpfs \
+  # udiskie \
+  # udisks2 \
+  # cantarell-fonts \
+  # noto-fonts \
+  # terminus-font \
+  # ttf-bitstream-vera \
+  # pamac \
+  # accountsservice \
+  # exo \
+  # garcon \
+  # thunar \
+  # thunar-volman \
+  # tumbler \
+  # xfce4-appfinder \
+  # xfce4-panel \
+  # xfce4-power-manager \
+  # xfce4-session \
+  # xfce4-settings \
+  # xfconf \
+  # xfdesktop \
+  # xfwm4 \
+  # blueman \
+  # ffmpegthumbnailer \
+  # freetype2 \
+  # gnome-keyring \
+  # libopenraw \
+  # light-locker \
+  # network-manager-applet \
+  # refind \
+  # refind-theme-maia \
+  # mkinitcpio \
+  # efibootmgr \
+  # vim \
+  # links
 
 manjaro-chroot /mnt /bin/bash
 
