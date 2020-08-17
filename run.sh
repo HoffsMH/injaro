@@ -143,17 +143,17 @@ basestrap /mnt $LINUX_KERNEL \
   alsa-firmware \
   alsa-utils \
   ffmpeg \
-  gst-libav \
-  gst-plugins-base \
-  gst-plugins-good \
-  gst-plugins-ugly \
-  libdvdcss \
-  manjaro-pulse \
-  pulseaudio-bluetooth \
-  pulseaudio-ctl \
-  pulseaudio-zeroconf \
-  android-tools \
-  android-udev
+  gst-libav
+  # gst-plugins-base \
+  # gst-plugins-good \
+  # gst-plugins-ugly \
+  # libdvdcss \
+  # manjaro-pulse \
+  # pulseaudio-bluetooth \
+  # pulseaudio-ctl \
+  # pulseaudio-zeroconf \
+  # android-tools \
+  # android-udev
   # gvfs \
   # gvfs-afc \
   # gvfs-gphoto2 \
