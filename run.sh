@@ -113,30 +113,30 @@ basestrap /mnt $LINUX_KERNEL \
   mdadm \
   nfs-utils \
   rsync \
-  systemd-fsck-silent
-  # systemd-sysvcompat \
-  # tlp \
-  # wpa_supplicant \
-  # tar \
-  # texinfo \
-  # usbutils \
-  # util-linux \
-  # wget \
-  # which \
-  # xfsprogs \
-  # zsh \
-  # avahi \
-  # networkmanager \
-  # networkmanager-openconnect \
-  # networkmanager-openvpn \
-  # networkmanager-pptp \
-  # networkmanager-vpnc \
-  # nss-mdns \
-  # ntp \
-  # mobile-broadband-provider-info \
-  # modemmanager \
-  # openresolv \
-  # openssh \
+  systemd-fsck-silent \
+  systemd-sysvcompat \
+  tlp \
+  wpa_supplicant \
+  tar \
+  texinfo \
+  usbutils \
+  util-linux \
+  wget \
+  which \
+  xfsprogs \
+  zsh \
+  avahi \
+  networkmanager \
+  networkmanager-openconnect \
+  networkmanager-openvpn \
+  networkmanager-pptp \
+  networkmanager-vpnc \
+  nss-mdns \
+  ntp \
+  mobile-broadband-provider-info \
+  modemmanager \
+  openresolv \
+  openssh
   # samba \
   # usb_modeswitch \
   # alsa-firmware \
@@ -195,10 +195,10 @@ basestrap /mnt $LINUX_KERNEL \
   # vim \
   # links
 
-manjaro-chroot /mnt /bin/bash
+manjaro-chroot /mnt
 
 # https://wiki.manjaro.org/Configure_Graphics_Cards
-sudo mhwd -a pci nonfree 0300
+mhwd -a pci nonfree 0300
 
 echo -e "
 KEYMAP=us
@@ -225,11 +225,11 @@ echo -e "$USER_PASSWORD\n$USER_PASSWORD" | passwd $USER_NAME
 
 mkinitcpio -p $LINUX_KERNEL
 
-genfstab -U /mnt >> /mnt/etc/fstab
-
-refind-install
+genfstab -U / >> /mnt/etc/fstab
 
 # install refind
+refind-install
+
 
 exit
 umount -R /mnt
