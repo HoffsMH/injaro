@@ -24,12 +24,12 @@ systemctl enable NetworkManager
 
 # set root passwd
 echo -e "$ROOT_PASSWORD\n$ROOT_PASSWORD" | passwd
-useradd $USER_NAME sys network,power,video,storage,lp,input,audio,wheel
+useradd $USER_NAME sys,network,power,video,storage,lp,input,audio,wheel
 echo -e "$USER_PASSWORD\n$USER_PASSWORD" | passwd $USER_NAME
 
 mkinitcpio -p $LINUX_KERNEL
 
-genfstab -U / >> /mnt/etc/fstab
+genfstab -U / >> /etc/fstab
 
 # install refind
 refind-install

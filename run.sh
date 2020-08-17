@@ -18,7 +18,7 @@ pacman --noconfirm -Syy pacman archlinux-keyring manjaro-keyring
 
 pacman-key --init
 pacman-key --populate archlinux manjaro
-pacman-key --refresh-keys --keyserver hkp://pool.sks-keyservers.net
+# pacman-key --refresh-keys --keyserver hkp://pool.sks-keyservers.net
 
 # https://www.ibm.com/support/knowledgecenter/SS6PEW_10.0.0/security/t_security_settingupluksencryption.html
 echo -e "$ROOT_PARTITION_PASSWORD" | cryptsetup -q luksFormat $ROOT_PARTITION
@@ -146,12 +146,12 @@ basestrap /mnt $LINUX_KERNEL \
   gst-libav \
   gst-plugins-base \
   gst-plugins-good \
-  gst-plugins-ugly
-  # libdvdcss \
-  # manjaro-pulse \
-  # pulseaudio-bluetooth \
-  # pulseaudio-ctl \
-  # pulseaudio-zeroconf \
+  gst-plugins-ugly \
+  libdvdcss \
+  manjaro-pulse \
+  pulseaudio-bluetooth \
+  pulseaudio-ctl \
+  pulseaudio-zeroconf
   # android-tools \
   # android-udev
   # gvfs \
