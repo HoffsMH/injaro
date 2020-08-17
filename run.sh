@@ -18,7 +18,7 @@ pacman-key --populate archlinux manjaro
 pacman-key --refresh-keys --keyserver hkp://pool.sks-keyservers.net
 
 # https://www.ibm.com/support/knowledgecenter/SS6PEW_10.0.0/security/t_security_settingupluksencryption.html
-cryptsetup -y -v luksFormat $ROOT_PARTITION
+echo -e "YES\n$ROOT_PARTITION_PASSWORD\n$ROOT_PARTITION_PASSWORD" | cryptsetup -y -v luksFormat $ROOT_PARTITION
 cryptsetup luksOpen $ROOT_PARTITION cryptroot
 
 # format our partitions
