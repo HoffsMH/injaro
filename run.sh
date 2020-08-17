@@ -19,7 +19,6 @@ pacman --noconfirm -Syy pacman archlinux-keyring manjaro-keyring
 pacman-key --init
 pacman-key --populate archlinux manjaro
 pacman-key --refresh-keys --keyserver hkp://pool.sks-keyservers.net
-pacman -S --noconfirm expect
 
 # https://www.ibm.com/support/knowledgecenter/SS6PEW_10.0.0/security/t_security_settingupluksencryption.html
 echo -e "$ROOT_PARTITION_PASSWORD" | cryptsetup -q luksFormat $ROOT_PARTITION
@@ -43,7 +42,7 @@ basestrap /mnt $LINUX_KERNEL \
   yay \
   acpi \
   amd-ucode \
-  b43-fw-cutter \
+  b43-fwcutter \
   bash \
   btrfs-progs \
   bzip2 \
@@ -56,7 +55,7 @@ basestrap /mnt $LINUX_KERNEL \
   dosfstools \
   e2fsprogs \
   ecryptfs-utils \
-  efi-bootmgr \
+  efibootmgr \
   exfat-utils \
   f2fs-tools \
   filesystem \
@@ -95,7 +94,7 @@ basestrap /mnt $LINUX_KERNEL \
   pacman \
   pciutils \
   perl \
-  proccps-ng \
+  procps-ng \
   psmisc \
   reiserfsprogs \
   sed \
@@ -107,7 +106,7 @@ basestrap /mnt $LINUX_KERNEL \
   acpid \
   cpupower \
   cronie \
-  crypsetup \
+  cryptsetup \
   device-mapper \
   dhcpcd \
   haveged \
@@ -115,7 +114,7 @@ basestrap /mnt $LINUX_KERNEL \
   mdadm \
   nfs-utils \
   rsync \
-  systemd-fsch-silent \
+  systemd-fsck-silent \
   systemd-sysvcompat \
   tlp \
   wpa_supplicant \
@@ -137,7 +136,7 @@ basestrap /mnt $LINUX_KERNEL \
   ntp \
   mobile-broadband-provider-info \
   modemmanager \
-  openresolve \
+  openresolv \
   openssh \
   samba \
   usb_modeswitch \
@@ -163,7 +162,7 @@ basestrap /mnt $LINUX_KERNEL \
   gvfs-smb \
   mtpfs \
   udiskie \
-  udisk2 \
+  udisks2 \
   cantarell-fonts \
   noto-fonts \
   noto-fonts-cjk \
@@ -176,9 +175,9 @@ basestrap /mnt $LINUX_KERNEL \
   thunar \
   thunar-volman \
   tumbler \
-  xfce-appfinder \
-  xfce-panel \
-  xfce-power-manager \
+  xfce4-appfinder \
+  xfce4-panel \
+  xfce4-power-manager \
   xfce4-session \
   xfce4-settings \
   xfconf \
@@ -188,12 +187,11 @@ basestrap /mnt $LINUX_KERNEL \
   ffmpegthumbnailer \
   freetype2 \
   gnome-keyring \
-  libgsfttyytjkj \
   libopenraw \
   light-locker \
   network-manager-applet \
   refind \
-  refind-black-git \
+  refind-theme-maia \
   mkinitcpio \
   efibootmgr \
   vim \
