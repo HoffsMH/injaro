@@ -148,12 +148,12 @@ basestrap /mnt $LINUX_KERNEL \
   gst-plugins-good \
   gst-plugins-ugly \
   libdvdcss \
-  manjaro-pulse \
-  pulseaudio-bluetooth \
-  pulseaudio-ctl \
-  pulseaudio-zeroconf \
   refind \
   refind-theme-maia
+  # manjaro-pulse \
+  # pulseaudio-bluetooth \
+  # pulseaudio-ctl \
+  # pulseaudio-zeroconf \
   # android-tools \
   # android-udev
   # gvfs \
