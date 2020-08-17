@@ -200,6 +200,5 @@ cp chroot.sh /mnt/
 
 manjaro-chroot /mnt ./chroot.sh
 
-exit
 umount -R /mnt
 reboot

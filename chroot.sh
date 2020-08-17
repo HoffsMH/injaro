@@ -34,4 +34,6 @@ genfstab -U / >> /etc/fstab
 # install refind
 refind-install
 
+exit
+
 
