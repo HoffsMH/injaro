@@ -15,7 +15,7 @@ pacman --noconfirm -Syy pacman archlinux-keyring manjaro-keyring
 
 pacman-key --init
 pacman-key --populate archlinux manjaro
-pacman-key --refresh-keys
+pacman-key --refresh-keys --keyserver hkp://pool.sks-keyservers.net
 
 # https://www.ibm.com/support/knowledgecenter/SS6PEW_10.0.0/security/t_security_settingupluksencryption.html
 cryptsetup -y -v luksFormat $ROOT_PARTITION
