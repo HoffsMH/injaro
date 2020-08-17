@@ -11,6 +11,8 @@ source .envrc
 loadkeys us
 
 pacman-mirrors --api --set-branch stable --url https://manjaro.moson.org
+pacman-mirrors -F
+pacman -Syyu
 pacman -Syy pacman archlinux-keyring manjaro-keyring
 
 pacman-key --init
