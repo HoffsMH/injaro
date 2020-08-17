@@ -9,6 +9,7 @@ set -e
 source .envrc
 loadkeys us
 
+
 pacman-mirrors --api --set-branch stable --url https://manjaro.moson.org
 
 # enable this when connections are bad or packages are out of date
@@ -19,6 +20,8 @@ pacman --noconfirm -Syy pacman archlinux-keyring manjaro-keyring
 pacman-key --init
 pacman-key --populate archlinux manjaro
 # pacman-key --refresh-keys --keyserver hkp://pool.sks-keyservers.net
+
+pacman --noconfirm -S arch-install-scripts
 
 # https://www.ibm.com/support/knowledgecenter/SS6PEW_10.0.0/security/t_security_settingupluksencryption.html
 echo -e "$ROOT_PARTITION_PASSWORD" | cryptsetup -q luksFormat $ROOT_PARTITION

@@ -1,0 +1,10 @@
+export EFI_PARTITION=/dev/sda1
+export BOOT_PARTITION=/dev/sda2
+export SWAP_PARTITION=/dev/sda3
+export ROOT_PARTITION=/dev/sda4
+export ROOT_PARTITION_PASSWORD="change this!"
+export MACHINE_NAME="nile"
+export LINUX_KERNEL="linux54"
+export ROOT_PASSWORD="change this!"
+export USER_NAME="hoffs"
+export USER_PASSWORD="change this!"
