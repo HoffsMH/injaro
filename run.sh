@@ -20,7 +20,7 @@ pacman -S --noconfirm expect
 
 # https://www.ibm.com/support/knowledgecenter/SS6PEW_10.0.0/security/t_security_settingupluksencryption.html
 echo -e "YES\n$ROOT_PARTITION_PASSWORD\n$ROOT_PARTITION_PASSWORD" | cryptsetup -y -v luksFormat $ROOT_PARTITION
-./luksopen.exp
+./luksopen-root.exp
 
 # format our partitions
 mkfs.fat -F 32 $EFI_PARTITION
