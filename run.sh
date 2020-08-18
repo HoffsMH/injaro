@@ -21,7 +21,7 @@ pacman-key --init
 pacman-key --populate archlinux manjaro
 pacman-key --refresh-keys --keyserver hkp://pool.sks-keyservers.net
 
-pacman --noconfirm -S arch-install-scripts
+pacman --noconfirm -S arch-install-scripts refind refind-drivers
 
 # https://www.ibm.com/support/knowledgecenter/SS6PEW_10.0.0/security/t_security_settingupluksencryption.html
 echo -e "$ROOT_PARTITION_PASSWORD" | cryptsetup -q luksFormat $ROOT_PARTITION
