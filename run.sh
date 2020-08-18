@@ -13,13 +13,13 @@ loadkeys us
 pacman-mirrors --api --set-branch stable --url https://manjaro.moson.org
 
 # enable this when connections are bad or packages are out of date
-# pacman-mirrors -f
+pacman-mirrors -f
 
 pacman --noconfirm -Syy pacman archlinux-keyring manjaro-keyring
 
 pacman-key --init
 pacman-key --populate archlinux manjaro
-# pacman-key --refresh-keys --keyserver hkp://pool.sks-keyservers.net
+pacman-key --refresh-keys --keyserver hkp://pool.sks-keyservers.net
 
 pacman --noconfirm -S arch-install-scripts
 
